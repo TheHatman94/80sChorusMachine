@@ -11,7 +11,7 @@ void _80sMachineAudioProcessor::prepareToPlay (double sampleRate, int samplesPer
 {
     currentSampleRate = (float)sampleRate;
     
-    // Ridotto il buffer a 0.5 secondi (ancora abbondante, ma riduce l'impronta di memoria)
+    // Ridotto il buffer a 0.5 secondi
     int delayBufferSize = (int)(sampleRate * 0.5);
     
     delayBuffer.setSize (2, delayBufferSize, false, true);
